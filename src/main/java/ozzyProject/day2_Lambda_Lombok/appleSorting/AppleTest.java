@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Predicate;
 /*
 In software engineering, user requirements will change.
 Example : Imagine an application to help a farmer understand his inventory.
@@ -24,13 +25,15 @@ public class AppleTest {
         inventory.add(new Apple(300, Color.RED));
         inventory.add(new Apple(200, Color.RED));
         inventory.add(new Apple(150, Color.GREEN));
-        System.out.println(filter(inventory,new AppleGreen()));
-        System.out.println(filter(inventory,new AppleHeavy()));
+//        System.out.println(filter(inventory,new AppleGreen()));
+//        System.out.println(filter(inventory,new AppleHeavy()));
         applesFormater(inventory, new AppleSimpleFormater());
+        ArrayList<Apple>greenApple=filter(inventory, apple->apple.getColor().equals(Color.GREEN));
+        System.out.println(greenApple);
 
     }
 
-    public static ArrayList<Apple>filter(ArrayList<Apple>apples,AppleCondition condition) {
+    public static ArrayList<Apple>filter(ArrayList<Apple>apples, Predicate<Apple> condition) {
         ArrayList<Apple> result = new ArrayList<>();
         for (Apple apple : apples) {
             if (condition.test(apple)) {
