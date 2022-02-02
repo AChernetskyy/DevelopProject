@@ -5,4 +5,9 @@ public class BubleSort implements Sorting{
     public void sort() {
         System.out.println("BubbleSorting");
     }
+
+    @Override
+    public int string(String str) {
+        return str.length();
+    }
 }

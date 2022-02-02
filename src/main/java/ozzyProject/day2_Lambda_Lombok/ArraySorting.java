@@ -1,5 +1,8 @@
 package ozzyProject.day2_Lambda_Lombok;
 
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
 public class ArraySorting {
     /*
     THIS CALLED BEHAVIOR PARAMETERIZATION
@@ -13,11 +16,15 @@ execute later.
 
     public static void main(String[] args) {
         ArraySorting as = new ArraySorting();
-        as.sort(new BubleSort());
+        //as.sort(new BubleSort());
+        //as.sort(new QuickSorting());
+
         as.sort(new QuickSorting());
+        Consumer<String>p= sorting-> System.out.println();
+        p.accept("Jay");
     }
 
     private void sort(Sorting sorting){
-        sorting.sort();
+        //System.out.println(sorting.sort());
     }
 }

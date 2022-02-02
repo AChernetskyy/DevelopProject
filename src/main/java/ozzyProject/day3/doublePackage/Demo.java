@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 
 public class Demo {
     public static void main(String[] args) {
-        Calculate s1= (x,y)->Calculator.findSum(x,y);
+        Calculate s1= Calculator::findSum;
         s1.calculate(10,20);
 
         Calculate s2=Calculator::findSum;
@@ -26,7 +26,7 @@ public class Demo {
         BiFunction<String, Integer, String>fn2=String::substring;
         System.out.println(fn2.apply("Dino", 2));
 
-        Consumer<Integer>display = i-> System.out.println(i);
+        Consumer<Integer>display = System.out::println;
         display.accept(20);
 
 

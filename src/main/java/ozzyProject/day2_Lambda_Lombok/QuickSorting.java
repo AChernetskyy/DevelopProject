@@ -5,4 +5,9 @@ public class QuickSorting implements Sorting{
     public void sort() {
         System.out.println("QuickSorting");
     }
+
+    @Override
+    public int string(String str) {
+        return str.length();
+    }
 }
