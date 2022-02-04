@@ -15,6 +15,8 @@ public class Examples {
         Predicate<Integer>lesserThan=a->a<18;
         Boolean result= lesserThan.test(50);
         System.out.println(result);
+        Predicate<String>length=String::isBlank;
+        length.test("Anton");
 
         // Consumer
 

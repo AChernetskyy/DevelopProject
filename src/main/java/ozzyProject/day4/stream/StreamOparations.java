@@ -9,15 +9,15 @@ public class StreamOparations {
         //myList.forEach(System.out::println);
 
         //Filter
-        myList.stream().filter(i->i%3==0)
-                              .distinct()
-                              .forEach(System.out::println);
+       // myList.stream().filter(i->i%3==0).distinct().forEach(System.out::println);
 
         //LIMIT
         myList.stream().filter(i->i%2==0).limit(1).toArray();
 
         //MAP
-        myList.stream().map(number->number*2).filter(i->i%3==0).forEach(System.out::println);
+        //myList.stream().map(number->number*2).filter(i->i%3==0).forEach(System.out::println);
+        List<String>words=Arrays.asList("JAVA", "APPLE","HONDA", "DEVELOPER");
+        words.stream().map(String::length).forEach(System.out::println);
 
 
 

@@ -8,6 +8,7 @@ public class CarTest {
         c1.get().getModel();
 
         Supplier<Car>c2=Car::new;
-        c2.get().getModel();
+
+        System.out.println(c2.get().getModel());
     }
 }
