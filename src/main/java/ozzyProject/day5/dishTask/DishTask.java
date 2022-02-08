@@ -5,7 +5,7 @@ import java.util.Comparator;
 public class DishTask {
     public static void main(String[] args) {
         //Print all dishes name that has less than 400 calories
-        DishData.getAll().stream().filter(dish -> dish.getCalories()<400).map(Dish::getName).forEach(System.out::println);
+        //DishData.getAll().stream().filter(dish -> dish.getCalories()<400).map(Dish::getName).forEach(System.out::println);
 
         //Print the length of the name of each dish
         DishData.getAll().stream().map(Dish::getName).map(String::length).forEach(System.out::println);

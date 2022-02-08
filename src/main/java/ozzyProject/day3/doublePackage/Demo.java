@@ -2,6 +2,7 @@ package ozzyProject.day3.doublePackage;
 
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Demo {
     public static void main(String[] args) {
@@ -28,6 +29,7 @@ public class Demo {
 
         Consumer<Integer>display = System.out::println;
         display.accept(20);
+        Function<Integer,Double> check = MyClass::method;
 
 
 
